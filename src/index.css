@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom font-family  */
+
+@font-face {
+    font-family: 'AbrilFatface';
+    src: local('AbrilFatface'),
+    url('/fonts/AbrilFatface-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'),
+    url('/fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Tanach';
+    src: local('Tanach'),
+    url('/fonts/Tanach.ttf') format('truetype');
+}
