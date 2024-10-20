@@ -18,12 +18,12 @@ module.exports = {
       },
       keyframes: {
         moving: {
-          'from': {transform: 'translateX(0%)'},
-          'to': {transform: 'translateX(-100%)'}
+          '0%': {transform: 'translateX(100%)'},
+          '100%': {transform: 'translateX(-100%)'}
         }
       },
       animation: {
-        moving: 'moving 30s linear 0s infinite forwards'
+        moving: 'moving 20s linear infinite'
       }
     },
   },

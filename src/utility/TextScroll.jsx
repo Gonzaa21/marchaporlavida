@@ -1,14 +1,8 @@
 const TextScroll = () => {
     return (
-        <div className="my-20 w-full flex flex-row whitespace-nowrap overflow-y-hidden scrollbar-hide">
+        <div className="my-20 w-full flex flex-row whitespace-nowrap overflow-y-hidden scrollbar-hide select-none">
             <p className="text-white font-black text-5xl md:text-7xl uppercase animate-moving">
-                Al estudiar la Shoá, es crucial recordar no solo la muerte, sino también la vida. Debemos destacar los  esfuerzos por preservar la dignidad, así como la solidaridad y resistencia del pueblo. Esto amplía nuestra comprensión de lo sucedido y enriquece la memoria histórica.
-            </p>
-            <p className="text-white font-black text-5xl md:text-7xl uppercase animate-moving">
-                Al estudiar la Shoá, es crucial recordar no solo la muerte, sino también la vida. Debemos destacar los  esfuerzos por preservar la dignidad, así como la solidaridad y resistencia del pueblo. Esto amplía nuestra comprensión de lo sucedido y enriquece la memoria histórica.
-            </p>
-            <p className="text-white font-black text-5xl md:text-7xl uppercase animate-moving">
-                Al estudiar la Shoá, es crucial recordar no solo la muerte, sino también la vida. Debemos destacar los  esfuerzos por preservar la dignidad, así como la solidaridad y resistencia del pueblo. Esto amplía nuestra comprensión de lo sucedido y enriquece la memoria histórica.
+            Al recordar el Holocausto, no se trata solo de la muerte, sino de cómo los jóvenes lucharon por su dignidad y se apoyaron mutuamente.
             </p>
         </div>
     )

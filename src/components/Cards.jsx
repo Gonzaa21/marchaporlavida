@@ -1,7 +1,4 @@
 import TextScroll from '../utility/TextScroll.jsx'
-import { FiBarChart, FiBell } from "react-icons/fi";
-import { IoPlayBackOutline } from "react-icons/io5";
-import { FaRegFlag } from "react-icons/fa";
 import { MdOutlineLightMode } from "react-icons/md";
 import { TfiWorld } from "react-icons/tfi";
 import { AnimatePresence, motion } from "framer-motion";
@@ -134,15 +131,6 @@ const descriptionVariants = {
 const items = [
     {
       id: 1,
-      title: "Los jóvenes",
-      Icon: IoPlayBackOutline,
-      imgSrc:
-        "https://i.ibb.co/BwBPHZg/Sin-t-tulo-1.jpg",
-      description:
-        "Los jóvenes de las tnuot, de entre 15 y 25 años, resistieron al nazismo buscando alternativas al sometimiento. A pesar de las limitaciones impuestas, lucharon por marcar su propio destino e intentaron cambiar una sociedad dominada por el régimen totalitario",
-    },
-    {
-      id: 2,
       title: '"Final del tunel..."',
       Icon: MdOutlineLightMode,
       imgSrc:
@@ -151,16 +139,7 @@ const items = [
         "Tras la Segunda Guerra Mundial, las tnuot noar continuaron activas, adaptándose a nuevas circunstancias. A lo largo de la guerra y después de ella, cambiaron su forma de operar, enfrentándose a desafíos inesperados, pero mantuvieron y siguen manteniendo su esencia hasta la actualidad en todo el mundo.",
     },
     {
-      id: 3,
-      title: "Mandato británico",
-      Icon: FaRegFlag,
-      imgSrc:
-        "https://i.ibb.co/0nJhFKq/Sin-t-tulo-1.jpg",
-      description:
-        "Los refugiados judíos buscaban rehacer sus vidas, crearon kibutzim, centros donde los sobrevivientes encontraban refugio y comida. Además, fundaron escuelas y espacios para jóvenes que planeaban emigrar a Israel. Durante el mandato británico (1934-1948), la Hapalá (inmigración ilegal), permitió la llegada de judíos de todo el mundo a Israel.",
-    },
-    {
-      id: 4,
+      id: 2,
       title: "Actualidad",
       Icon: TfiWorld,
       imgSrc:

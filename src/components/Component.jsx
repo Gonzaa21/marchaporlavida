@@ -2,7 +2,9 @@ import TipScroll from '../utility/TipScroll.jsx'
 import Parallax from './Parallax.jsx'
 import Button from './Button.jsx'
 import Cards from './Cards.jsx'
-import video1 from '../assets/videos/video1.mp4';
+import ButtonModal from '../utility/ButtonModal.jsx'
+import Carousel from './Carousel.jsx'
+import video1 from '../assets/videos/Video1.mp4';
 import data from '../data.json'
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -42,7 +44,7 @@ function Component() {
       </div>
 
       <div className="flex flex-col justify-center bg-gradient-to-t from-black from-70% w-screen h-full relative overflow-hidden">
-        <h1 className="font-tanach text-neutral-100/20 font-bold tracking-wide text-[100px] xl:text-[300px] text-center mb-16 select-none animate-pulse">Tnuot Noar</h1>
+        <h1 className="font-tanach text-neutral-100/20 font-bold tracking-wide text-[100px] xl:text-[300px] text-center select-none animate-pulse">Tnuot Noar</h1>
         <div>
           <motion.video muted loop autoPlay
             style={{filter: isHovered ? "blur(5px)" : "none"}}
@@ -51,6 +53,7 @@ function Component() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           />
+          
           {
             data.map((data)=>(
               <div className="relative bottom-1/2 lg:bottom-1/2 mx-auto text-center text-white lg:max-w-screen-sm max-w-sm text-xs w-full">
@@ -81,8 +84,9 @@ function Component() {
             ))
           }
         </div>
-        
       </div>
+      <Carousel />
+      <ButtonModal />
       <Button />
       <Parallax />
       <Cards />

@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 export default function TipScroll() {
   return (
     <motion.div 
-      animate={{y: 300}} 
-      initial={{y: 1200}} 
+      initial={{y: 0, opacity: 0}}
+      animate={{y: 150, opacity: 1}} 
       transition={{delay: 6, duration: .5, type: 'spring'}}
       >
         <Chip

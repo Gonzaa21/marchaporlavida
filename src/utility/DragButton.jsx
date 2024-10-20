@@ -9,7 +9,7 @@ const DragButton = () => {
     <div className="place-content-center bg-neutral-950">
       <button
         onClick={() => setOpen(true)}
-        className="flex items-center justify-between rounded w-full  bg-neutral-800 px-5 py-2 text-neutral-300 transition-colors hover:text-neutral-100 hover:bg-neutral-700 md:w-fit select-none"
+        className="inline-flex items-center justify-between rounded w-full  bg-neutral-800 px-5 py-2 text-neutral-300 transition-colors hover:text-neutral-100 hover:bg-neutral-700 md:w-fit select-none"
       >
         Más información <FiArrowUpRight />
       </button>
@@ -42,8 +42,8 @@ const DragButton = () => {
           </p>
           <p>
             El 18 de enero de 1943 era el día fijado por los nazis para la liquidación del gueto de 
-            Varsovia. Esta vez, sin embargo, los nazis se encontraron con una fuerte resistencia armada. 
-            <b>Esta fue la primera vez que fueron enfrentados los planes alemanes</b>. Por primera vez, 
+            Varsovia. Esta vez, sin embargo, los nazis se encontraron con una fuerte resistencia armada.
+            <b> Esta fue la primera vez que fueron enfrentados los planes alemanes</b>. Por primera vez, 
             la población judía vio que algo se podía hacer contra la voluntad y la fuerza de los alemanes. 
             En ese período, ya no se tomaba en cuenta al Judenrat ni se escuchaban sus órdenes; la ŻOB 
             reinaba en el gueto plenamente. Era la única fuerza y el único poder que tenía autoridad y 
