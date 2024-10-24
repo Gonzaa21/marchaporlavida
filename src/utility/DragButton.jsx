@@ -6,7 +6,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 const DragButton = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="place-content-center bg-neutral-950">
+    <div className="lg:inline-flex place-content-center bg-neutral-950">
       <button
         onClick={() => setOpen(true)}
         className="inline-flex items-center justify-between rounded w-full  bg-neutral-800 px-5 py-2 text-neutral-300 transition-colors hover:text-neutral-100 hover:bg-neutral-700 md:w-fit select-none"

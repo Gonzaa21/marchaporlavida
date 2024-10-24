@@ -9,6 +9,25 @@ import data from '../data.json'
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
+const imgs1 = [
+  "https://i0.wp.com/www.enlacejudio.com/wp-content/uploads/2020/06/abanderados-hh.jpg?w=960&ssl=1",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/PikiWiki_Israel_4143_Gan-Shmuel_sg9-_31.jpg/299px-PikiWiki_Israel_4143_Gan-Shmuel_sg9-_31.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/PikiWiki_Israel_4177_Gan-Shmuel_sg29-_31.jpg/305px-PikiWiki_Israel_4177_Gan-Shmuel_sg29-_31.jpg",
+  "https://i0.wp.com/eldiariojudio.com/wp-content/uploads/2013/09/kvutza-hh-2.jpg?w=600&ssl=1",
+  "https://s3-us-west-2.amazonaws.com/lglformsimg/Bqf0jhe2sFU/BW-at-Mosh.jpg-BW+at+Mosh.jpg",
+  "https://i0.wp.com/www.enlacejudio.com/wp-content/uploads/2013/03/san176.jpg?w=314&ssl=1",
+  "http://memij.com.br/images/iconografia/0114hashomer-sp-br.jpg",
+];
+
+const imgs2 = [
+  "https://i0.wp.com/www.enlacejudio.com/wp-content/uploads/2014/02/Captura-de-pantalla-2014-02-09-a-las-08.36.04.png?w=356&ssl=1",
+  "https://www.yadvashem.org/sites/default/files/7b.jpg",
+  "https://www.yadvashem.org/sites/default/files/75GO5_.jpg",
+  "https://www.yadvashem.org/sites/default/files/Lodz%2C%20Poland%2C%20The%20Lodz%20Ghetto%20Symphony%20Orchestra%2C.JPG",
+  "https://encyclopedia.ushmm.org/images/large/59e7938c-a6bc-44f2-a1b1-a0068141f6d2.jpg",
+  "https://encyclopedia.ushmm.org/images/large/0376e004-bd7d-4212-a8e1-8a795817016b.jpg"
+];
+
 function Component() {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -85,9 +104,10 @@ function Component() {
           }
         </div>
       </div>
-      <Carousel />
+      <Carousel images={imgs1}/>
       <ButtonModal />
       <Button />
+      <Carousel images={imgs2}/>
       <Parallax />
       <Cards />
     </>

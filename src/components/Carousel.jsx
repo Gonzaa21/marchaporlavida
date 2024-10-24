@@ -1,16 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
-const imgs = [
-  "https://i0.wp.com/www.enlacejudio.com/wp-content/uploads/2020/06/abanderados-hh.jpg?w=960&ssl=1",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/PikiWiki_Israel_4143_Gan-Shmuel_sg9-_31.jpg/299px-PikiWiki_Israel_4143_Gan-Shmuel_sg9-_31.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/PikiWiki_Israel_4177_Gan-Shmuel_sg29-_31.jpg/305px-PikiWiki_Israel_4177_Gan-Shmuel_sg29-_31.jpg",
-  "https://i0.wp.com/eldiariojudio.com/wp-content/uploads/2013/09/kvutza-hh-2.jpg?w=600&ssl=1",
-  "https://s3-us-west-2.amazonaws.com/lglformsimg/Bqf0jhe2sFU/BW-at-Mosh.jpg-BW+at+Mosh.jpg",
-  "https://i0.wp.com/www.enlacejudio.com/wp-content/uploads/2013/03/san176.jpg?w=314&ssl=1",
-  "http://memij.com.br/images/iconografia/0114hashomer-sp-br.jpg",
-];
-
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
 const DRAG_BUFFER = 50;
@@ -22,9 +12,8 @@ const SPRING_OPTIONS = {
   damping: 50,
 };
 
-const Carousel = () => {
+const Carousel = ({ images }) => {
   const [imgIndex, setImgIndex] = useState(0);
-
   const dragX = useMotionValue(0);
 
   useEffect(() => {
@@ -33,7 +22,7 @@ const Carousel = () => {
 
       if (x === 0) {
         setImgIndex((pv) => {
-          if (pv === imgs.length - 1) {
+          if (pv === images.length - 1) {
             return 0;
           }
           return pv + 1;
@@ -42,12 +31,12 @@ const Carousel = () => {
     }, AUTO_DELAY);
 
     return () => clearInterval(intervalRef);
-  }, []);
+  }, [dragX, images.length]);
 
   const onDragEnd = () => {
     const x = dragX.get();
 
-    if (x <= -DRAG_BUFFER && imgIndex < imgs.length - 1) {
+    if (x <= -DRAG_BUFFER && imgIndex < images.length - 1) {
       setImgIndex((pv) => pv + 1);
     } else if (x >= DRAG_BUFFER && imgIndex > 0) {
       setImgIndex((pv) => pv - 1);
@@ -55,7 +44,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-neutral-950 py-8 w-full">
+    <div className="relative overflow-hidden bg-black py-8 w-full">
       <motion.div
         drag="x"
         dragConstraints={{
@@ -72,10 +61,10 @@ const Carousel = () => {
         onDragEnd={onDragEnd}
         className="flex cursor-grab items-center active:cursor-grabbing"
       >
-        <Images imgIndex={imgIndex} />
+        <Images images={images} imgIndex={imgIndex} />
       </motion.div>
 
-      <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
+      <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} images={images} />
       <GradientEdges />
     </div>
   );
@@ -83,44 +72,40 @@ const Carousel = () => {
 
 export default Carousel;
 
-const Images = ({ imgIndex }) => {
+const Images = ({ images, imgIndex }) => {
   return (
     <>
-      {imgs.map((imgSrc, idx) => {
-        return (
-          <motion.div
-            key={idx}
-            style={{
-              backgroundImage: `url(${imgSrc})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            animate={{
-              scale: imgIndex === idx ? 0.95 : 0.85,
-            }}
-            transition={SPRING_OPTIONS}
-            className="aspect-video w-full justify-center shrink-0 rounded-xl bg-neutral-800 object-cover"
-          />
-        );
-      })}
+      {images.map((imgSrc, idx) => (
+        <motion.div
+          key={idx}
+          style={{
+            backgroundImage: `url(${imgSrc})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          animate={{
+            scale: imgIndex === idx ? 0.95 : 0.85,
+          }}
+          transition={SPRING_OPTIONS}
+          className="aspect-video w-full justify-center shrink-0 rounded-xl bg-neutral-800 object-cover"
+        />
+      ))}
     </>
   );
 };
 
-const Dots = ({ imgIndex, setImgIndex }) => {
+const Dots = ({ imgIndex, setImgIndex, images }) => {
   return (
     <div className="mt-4 flex w-full justify-center gap-2">
-      {imgs.map((_, idx) => {
-        return (
-          <button
-            key={idx}
-            onClick={() => setImgIndex(idx)}
-            className={`h-3 w-3 rounded-full transition-colors ${
-              idx === imgIndex ? "bg-neutral-50" : "bg-neutral-500"
-            }`}
-          />
-        );
-      })}
+      {images.map((_, idx) => (
+        <button
+          key={idx}
+          onClick={() => setImgIndex(idx)}
+          className={`h-3 w-3 rounded-full transition-colors ${
+            idx === imgIndex ? "bg-neutral-50" : "bg-neutral-500"
+          }`}
+        />
+      ))}
     </div>
   );
 };

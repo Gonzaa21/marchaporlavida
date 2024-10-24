@@ -134,9 +134,9 @@ const items = [
       title: '"Final del tunel..."',
       Icon: MdOutlineLightMode,
       imgSrc:
-        "https://i.ibb.co/Qrw0ZMx/Sin-t-tulo-1.jpg",
+        "https://encyclopedia.ushmm.org/images/large/95af54ea-8373-4353-8f2a-7a7a05321bc5.jpg",
       description:
-        "Tras la Segunda Guerra Mundial, las tnuot noar continuaron activas, adaptándose a nuevas circunstancias. A lo largo de la guerra y después de ella, cambiaron su forma de operar, enfrentándose a desafíos inesperados, pero mantuvieron y siguen manteniendo su esencia hasta la actualidad en todo el mundo.",
+        "Después de la liberación, los sobrevivientes de los campos de concentración buscaban a sus familias y reconstruían sus vidas en los campos de refugiados, donde crearon escuelas, centros culturales y celebraban festividades.",
     },
     {
       id: 2,
