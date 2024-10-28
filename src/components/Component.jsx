@@ -1,8 +1,9 @@
 import TipScroll from '../utility/TipScroll.jsx'
+import ButtonModal from '../utility/ButtonModal.jsx'
+import Title from '../utility/Title.jsx'
 import Parallax from './Parallax.jsx'
 import Button from './Button.jsx'
 import Cards from './Cards.jsx'
-import ButtonModal from '../utility/ButtonModal.jsx'
 import Carousel from './Carousel.jsx'
 import video1 from '../assets/videos/Video1.mp4';
 import data from '../data.json'
@@ -107,6 +108,7 @@ function Component() {
       <Carousel images={imgs1}/>
       <ButtonModal />
       <Button />
+      <Title />
       <Carousel images={imgs2}/>
       <Parallax />
       <Cards />
